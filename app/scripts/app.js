@@ -38,10 +38,9 @@ angular
         resolve: {
           product: function ($q, $stateParams, Product) {
             var def = $q.defer();
-            Product.get($stateParams.productId).then(function (data) {
-              def.resolve(data);
-            });
-            return def.promise;
+            var foo = Product.get($stateParams.productId)
+            console.log(foo)
+            // return def.promise;
           }
         }
       });
