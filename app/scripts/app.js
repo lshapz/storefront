@@ -37,10 +37,9 @@ angular
         controller: 'ProductsCtrl',
         resolve: {
           product: function ($q, $stateParams, Product) {
+            console.log(Product)
             var def = $q.defer();
-            var foo = Product.get($stateParams.productId)
-            console.log(foo)
-            // return def.promise;
+           return  Product.get($stateParams.productId)
           }
         }
       });
