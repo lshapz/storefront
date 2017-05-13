@@ -3,8 +3,6 @@
 angular
   .module('snipcartAngularApp', ['ui.router'])
   .config(function ($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.when('', '/');
-
     // This rule will remove the trailing !/ that Snipcart does not remove when
     // the cart is closed. It allows Angular to navigate to the expected route.
     $urlRouterProvider.rule(function ($injector, $location) {
