@@ -15,9 +15,9 @@ angular.module('sampleApp')
           url: item.slug,
           weight: item.master.weight     
         }
-      }).sort((a,b)=>{return parseInt(a.id) - parseInt(b.id)})
+      }).sort((a,b)=>{return parseInt(a.id) - parseInt(b.id)}).slice(0, 6)
 
-      
+
 
     return useful
     });

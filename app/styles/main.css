@@ -12,6 +12,9 @@ body{
 #section-heading{
   margin: 10%;
 }
+.lead {
+  font-size: 1.5em;
+}
 
 #buttons{
   text-align: center;
