@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('snipcartAngularApp')
+angular.module('sampleApp')
   .component('buyButton', {
     templateUrl: 'views/buybutton.html',
     bindings: {

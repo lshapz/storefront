@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('snipcartAngularApp')
+angular.module('sampleApp')
   .controller('MainCtrl', function ($scope, products) {
     $scope.products = products;
   });

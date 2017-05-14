@@ -3,8 +3,8 @@ Store
 </h1>
 
 <div class="row">
-  <div ng-repeat="product in products">
-    <div class="col-sm-4">
+  <div ng-repeat="product in products" | listToMatrix:4>
+    <div class="four columns">
       <product-list-item product="product"></product-list-item>
     </div>
   </div>

@@ -9,6 +9,9 @@ body{
   min-height: 100%;
   padding: 0;
 }
+#section-heading{
+  margin: 10%;
+}
 
 #buttons{
   text-align: center;

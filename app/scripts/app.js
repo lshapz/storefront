@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('snipcartAngularApp', ['ui.router'])
+  .module('sampleApp', ['ui.router'])
   .config(function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.when('', '/');
 
@@ -37,9 +37,18 @@ angular
         controller: 'ProductsCtrl',
         resolve: {
           product: function ($q, $stateParams, Product) {
-            console.log(Product)
             var def = $q.defer();
            return  Product.get($stateParams.productId)
+          }
+        }
+      })
+      .state('cart', {
+        url: '/cart',
+        templateUrl: 'views/cart.html',
+        controller: 'CartCtrl',
+        resolve: {
+          product: function ($q, $stateParams, Cart) {
+           return Cart.add($stateParams.productId)
           }
         }
       });

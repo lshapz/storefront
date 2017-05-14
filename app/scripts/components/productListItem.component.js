@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('snipcartAngularApp')
+angular.module('sampleApp')
   .component('productListItem', {
     templateUrl: 'views/productlistitem.html',
     bindings: {

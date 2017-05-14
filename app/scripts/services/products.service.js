@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('snipcartAngularApp')
+angular.module('sampleApp')
   .factory('Product', function ($http, $q) {
       var json = $http.get('https://nameless-sands-65262.herokuapp.com/api/v1/products.json?token=8779437c5723b3cd5586bd590b4f9c1e02c448a02c3db7a7').then(function (response) {
       let prod = response.data.products
@@ -11,11 +11,13 @@ angular.module('snipcartAngularApp')
           price: item.price,
           sku: item.master.sku,
           image: "https://nameless-sands-65262.herokuapp.com" + (item.master.images[0].small_url),
-          description: item.description        
+          description: item.description,
+          url: item.slug,
+          weight: item.master.weight     
         }
       }).sort((a,b)=>{return parseInt(a.id) - parseInt(b.id)})
 
-
+      
 
     return useful
     });
@@ -34,8 +36,11 @@ angular.module('snipcartAngularApp')
           name: item.name,
           price: item.price,
           sku: item.master.sku,
-          image: "https://nameless-sands-65262.herokuapp.com" + (item.master.images[0].small_url),
-          description: item.description        
+          image: "https://nameless-sands-65262.herokuapp.com" + (item.master.images[0].large_url),
+          description: item.description,
+          url: item.slug,
+          weight: item.master.weight     
+       
         }
         }))
 
