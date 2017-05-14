@@ -1,9 +1,9 @@
-<h1>
-Store
-</h1>
-  <a ui-sref="checkout">
-    <ngcart-summary template-url="scripts/components/ngcart/summary.html"></ngcart-summary>
-  </a>
+<ul class="nav">
+    <li>  <a ui-sref="main" class="btn btn-default btn-lg">Store</a></li>  
+
+  <li style="margin-left:50%"><a ui-sref="checkout">
+    <ngcart-summary template-url="scripts/components/ngcart/summary.html"></ngcart-summary></a></li>
+</ul>
 <div class="container">
 <div class="row">
   <div ng-repeat="product in products">
@@ -12,6 +12,6 @@ Store
     </div>
   </div>
 </div>
-
-
+ 
+</div>
 </div>
