@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('sampleApp', ['ui.router'])
+  .module('sampleApp', ['ui.router', 'ngCart'])
   .config(function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.when('', '/');
 
@@ -42,14 +42,13 @@ angular
           }
         }
       })
-      .state('cart', {
-        url: '/cart',
-        templateUrl: 'views/cart.html',
-        controller: 'CartCtrl',
-        resolve: {
-          product: function ($q, $stateParams, Cart) {
-           return Cart.add($stateParams.productId)
-          }
-        }
+      .state('checkout', {
+        url: '/checkout',
+        templateUrl: 'views/checkout.html',
+        controller: 'ProductCheckoutCtrl'
       });
+
+
+
+      ;
   });
