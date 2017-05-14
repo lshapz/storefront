@@ -2,6 +2,11 @@
 
 angular.module('sampleApp')
   .factory('Product', function ($http, $q) {
+    var order
+    var getOrder = $http.post('https://nameless-sands-65262.herokuapp.com/api/v1/orders.json?token=8779437c5723b3cd5586bd590b4f9c1e02c448a02c3db7a7').then(function (response) {
+      order = response.data.number
+    });
+
       var json = $http.get('https://nameless-sands-65262.herokuapp.com/api/v1/products.json?token=8779437c5723b3cd5586bd590b4f9c1e02c448a02c3db7a7').then(function (response) {
       let prod = response.data.products
       let useful = prod.map(item=>{
@@ -13,7 +18,8 @@ angular.module('sampleApp')
           image: "https://nameless-sands-65262.herokuapp.com" + (item.master.images[0].small_url),
           description: item.description,
           url: item.slug,
-          weight: item.master.weight     
+          weight: item.master.weight,
+          order: order
         }
       }).sort((a,b)=>{return parseInt(a.id) - parseInt(b.id)}).slice(0, 6)
 

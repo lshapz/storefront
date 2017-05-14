@@ -1,3 +1,11 @@
+<!-- 
+<ul class="nav">
+    <li>  <a ui-sref="main" class="btn btn-default btn-lg">Store</a></li>  
+
+  <li style="margin-left:50%"><a ui-sref="checkout">
+    <ngcart-summary template-url="scripts/components/ngcart/summary.html"></ngcart-summary></a></li>
+</ul>
+ -->
 <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
     Your cart is empty
 </div>
@@ -52,7 +60,7 @@
         </tr>
         </tbody>
     </table>
-<ngcart-checkout service="http" template-url="scripts/components/ngcart/checkout.html" settings="{ url:'https://nameless-sands-65262.herokuapp.com/api/v1/orders.json?token=8779437c5723b3cd5586bd590b4f9c1e02c448a02c3db7a7' }"></ngcart-checkout>
+<ngcart-checkout service="http" template-url="scripts/components/ngcart/checkout.html" settings="{ url: ('https://nameless-sands-65262.herokuapp.com/api/v1/orders/' + ngCart.getItems()[0].order + '?token=8779437c5723b3cd5586bd590b4f9c1e02c448a02c3db7a7') }"></ngcart-checkout>
 
 
 <style>
@@ -64,3 +72,7 @@
     }
 </style>
 </div>
+<!-- 
+<div ng-controller="MainController">
+<a ui-sref="main" class="btn btn-default btn-lg">Store</a>
+</div> -->
