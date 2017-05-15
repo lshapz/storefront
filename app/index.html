@@ -1,6 +1,25 @@
 <!doctype html>
 <html>
   <head>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/ngCart/dist/ngCart.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/products.js"></script>
+    <script src="scripts/services/products.service.js"></script>
+    <script src="scripts/components/buyButton.component.js"></script>
+    <script src="scripts/components/productListItem.component.js"></script>
+    <script src="scripts/controllers/cart.js"></script>
+
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -27,25 +46,6 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/ngCart/dist/ngCart.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/products.js"></script>
-    <script src="scripts/services/products.service.js"></script>
-    <script src="scripts/components/buyButton.component.js"></script>
-    <script src="scripts/components/productListItem.component.js"></script>
-    <script src="scripts/controllers/cart.js"></script>
-
     <!-- endbuild -->
 </body>
 </html>

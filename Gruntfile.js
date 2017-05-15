@@ -466,6 +466,7 @@ module.exports = function (grunt) {
     grunt.task.run(['serve:' + target]);
   });
   grunt.registerTask('deploy', ['buildcontrol']);
+  grunt.loadNpmTasks('grunt-build-control');
 
   grunt.registerTask('test', [
     'clean:server',
